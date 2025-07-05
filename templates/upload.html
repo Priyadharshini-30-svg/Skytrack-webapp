@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload GNSS Files</title>
+  <link rel="stylesheet" href="/static/styles.css"> <!-- Optional if you have CSS -->
+</head>
+<body>
+  <div class="container">
+    <h1>SkyTrack AI</h1>
+    <h2>Upload GNSS CSV Files</h2>
+
+   <form action="/upload" method="post" enctype="multipart/form-data">
+  <label><strong>Upload GPS File:</strong></label><br>
+  <input type="file" name="gpsFile" accept=".csv" /><br><br>
+  
+  <label><strong>Upload NAVIC File:</strong></label><br>
+  <input type="file" name="navicFile" accept=".csv" /><br><br>
+  
+  <button type="submit" class="btn">Run Analysis</button>
+</form>
+  <!-- ✅ JavaScript to enable button only when both files selected -->
+  <script>
+    const gpsFile = document.getElementById("gpsFile");
+    const navicFile = document.getElementById("navicFile");
+    const runBtn = document.getElementById("runBtn");
+
+    function checkFiles() {
+      runBtn.disabled = !(gpsFile.files.length && navicFile.files.length);
+    }
+
+    gpsFile.addEventListener("change", checkFiles);
+    navicFile.addEventListener("change", checkFiles);
+  </script>
+</body>
+</html>

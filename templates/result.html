@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result - SkyTrack AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            background-color: #f2f2f2;
+        }
+        h2 {
+            color: #333;
+        }
+        .result-box {
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            width: fit-content;
+        }
+        .result-box p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>🛰 GNSS Position Result</h2>
+    <div class="result-box">
+        <p><strong>Latitude:</strong> {{ result.latitude }}</p>
+        <p><strong>Longitude:</strong> {{ result.longitude }}</p>
+        <p><strong>Altitude:</strong> {{ result.altitude }}</p>
+        <p><strong>Timestamp:</strong> {{ result.timestamp }}</p>
+        <p><strong>PDOP:</strong> {{ result.pdop }}</p>
+        <p><strong>HDOP:</strong> {{ result.hdop }}</p>
+        <p><strong>VDOP:</strong> {{ result.vdop }}</p>
+        <p><strong>Average CNO:</strong> {{ result.avg_cno }}</p>
+        <p><strong>Satellites Used:</strong> {{ result.sat_ids }}</p>
+        <p><strong>Mode:</strong> {{ result.mode }}</p>
+    </div>
+</body>
+</html>

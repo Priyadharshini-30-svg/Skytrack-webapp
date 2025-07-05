@@ -1,0 +1,33 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyTrack AI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<head>
+  <title>SkyTrackApp</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}" </head>
+
+<body>
+  <div class="container">
+    <h1>SkyTrack AI</h1>
+    <h2>GNSS LOS/NLOS & Positioning Tool</h2>
+    <p>
+      Classifies GPS and NAVIC Signals as LOS/NLOS<br>
+      Combines strong LOS signals to estimate accurate positions.
+    </p>
+    <div class="card">
+      <h3>Input File Format</h3>
+      <p><strong>GPS File:</strong> System Time, PRN[9–33], Elev[9–33], Azim[9–33], CNO[9–33], PDOP, HDOP, VDOP</p>
+      <p><strong>NAVIC File:</strong> System Time, PRN[0–8], Elev[0–8], Azim[0–8], CNO[0–8], PDOP, HDOP, VDOP</p>
+      <p><em>Note: Ensure time format is YYYY-M-D H:M:S</em></p>
+      <a href="upload" class="btn">Get Started</a>
+    </div>
+  </div>
+</body>
+
+</html>
